@@ -10,6 +10,7 @@ export interface TodoForm{
 //3. Definir la estructura  de cada todo
 
 export interface Todo{
+    id: string
     titulo: string
     prioridad: Priority
     completada: boolean

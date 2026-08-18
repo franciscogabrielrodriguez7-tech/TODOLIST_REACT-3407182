@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import type { ChangeEvent } from 'react'
 import type { TodoForm, Todo } from './interfaces/Form'
+import { FiCheckCircle, FiAlertCircle } from "react-icons/fi"
 
 const App = () => {
 
@@ -10,8 +11,7 @@ const App = () => {
   // useState: Hook que permite crear un Estado (variable reactiva)
   const [ contador, setContador] = useState<number>(10)
   // estado para el formulario
-  const [ formulario, setFormulario ] = 
-                    useState<TodoForm>({
+  const [ formulario, setFormulario ] = useState<TodoForm>({
                       titulo:'',
                       prioridad:'Baja'
                     })
@@ -41,23 +41,30 @@ const App = () => {
       setFormulario({
         ...formulario,
         [name] : value
-
       })
-
   }
   // function para tratar submit
   const envioForm =(event:any)=>{
+    // quitar el comportamiento por defecto de un formulario
+    // submit
     event.preventDefault();
     // establecer el atributo "completada" a la tarea del formulario
     
     const Tarea: Todo = {
-      ...formulario, 
+      // UUID es un tipo de dato de ID unico y universal
+      id: crypto.randomUUID(),
+      ...formulario,  
         completada:false
       }; 
     // spread: separar cada todo en el arreglo, 
     // volverlos a unir en otro arreglo
     // pero con el nuevo TODO
     setListaTodo([...listaTodo, Tarea])
+    // cambiar el estado del formulario a vacio
+    setFormulario({
+      titulo:'',
+      prioridad:'Baja'
+    })
   }
   return (
     <>
@@ -79,6 +86,7 @@ const App = () => {
                       placeholder="p.ej revisar github"
                       name="titulo"
                       onChange={ inputChange }
+                      value={ formulario.titulo }
                  />
             </div>
             <div>
@@ -87,10 +95,13 @@ const App = () => {
                   id="prioridad"
                   name="prioridad"
                   onChange={inputChange}
+                  value={ formulario.prioridad }
+                  
               >
+                 {/*programacion para elegir la opcion determinada en el input del formulario*/}
                 <option value="Alta">Alta</option>
                 <option value="Media">Media</option>
-                <option value="Baja">Baja</option>
+                <option value="Baja" >Baja</option>
               </select>
             </div>
             <div>
@@ -99,6 +110,46 @@ const App = () => {
               </button>
             </div>
         </form>
+    </section>
+    <section>
+      <h1>Mis tareas</h1>
+      <table className='blueTable'>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>titulo</th>
+            <th>propiedad</th>
+            <th>completada</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            listaTodo.map((todo: Todo)=>(
+              <tr>
+                <td>{todo.id}</td>
+                <td>{todo.titulo}</td>
+                <td>{todo.prioridad}</td>
+                {/*operador ternario*/}
+                <td>{(todo.completada) === true ? 
+                                <span style={
+                                              { color:'rgb(27,165,53)'
+                                              }
+                                            }>Si <FiCheckCircle />
+                                            </span>: 
+                                <span style={
+                                              { color:'red'
+                                              }
+                                            }> No <FiAlertCircle />
+                                </span>
+                    }
+                </td>
+              </tr>
+            ))
+          }
+
+        </tbody>
+        <tfoot></tfoot>
+      </table>
     </section>
     </>
   )
