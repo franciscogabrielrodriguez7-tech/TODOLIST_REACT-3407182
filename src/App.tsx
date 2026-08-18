@@ -1,7 +1,8 @@
 import {useState} from 'react'
 import type { ChangeEvent } from 'react'
 import type { TodoForm, Todo } from './interfaces/Form'
-import { FiCheckCircle, FiAlertCircle } from "react-icons/fi"
+import { FiCheckCircle, FiAlertCircle, } from "react-icons/fi"
+import ContadorTareas from './views/contadorTareas'
 
 const App = () => {
 
@@ -68,10 +69,12 @@ const App = () => {
   }
   return (
     <>
-    <div>Mis tareas</div>
-    <p>{contador}</p>
-    <button onClick={incrementar}> Incrementar contador </button>
-    <button onClick={decrementar}> Decrementar contador </button>
+    <h1>Mis tareas</h1>
+    <ContadorTareas
+      contador={contador}
+      incrementar={incrementar}
+      decrementar={decrementar}
+    />
     {/*el formulario para registro de nuevo todo*/ }
     <section>
         <h2> Registro de nueva tarea </h2>

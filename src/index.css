@@ -1,104 +1,41 @@
-/*Esttilos para intex.html*/
-/*Estilos de reseteo*/
-/*selector universal*/
+/* =========================================================
+   ESTILOS PARA EL FORMULARIO
+   ========================================================= */
 
-*{
-  margin: 0;
-  padding: 0; 
-  box-sizing: border-box; 
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-table.blueTable {
-  border: 1px solid #1C6EA4;
-  background-color: #EEEEEE;
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-}
-table.blueTable td, table.blueTable th {
-  border: 1px solid #AAAAAA;
-  padding: 3px 2px;
-}
-table.blueTable tbody td {
-  font-size: 13px;
-}
-table.blueTable tr:nth-child(even) {
-  background: #D0E4F5;
-}
-table.blueTable thead {
-  background: #1C6EA4;
-  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-  border-bottom: 2px solid #444444;
-}
-table.blueTable thead th {
-  font-size: 15px;
-  font-weight: bold;
-  color: #FFFFFF;
-  border-left: 2px solid #D0E4F5;
-}
-table.blueTable thead th:first-child {
-  border-left: none;
-}
-
-table.blueTable tfoot {
-  font-size: 14px;
-  font-weight: bold;
-  color: #FFFFFF;
-  background: #D0E4F5;
-  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-  border-top: 2px solid #444444;
-}
-table.blueTable tfoot td {
-  font-size: 14px;
-}
-table.blueTable tfoot .links {
-  text-align: right;
-}
-table.blueTable tfoot .links a{
-  display: inline-block;
-  background: #1C6EA4;
-  color: #FFFFFF;
-  padding: 2px 8px;
-  border-radius: 5px;
-}
-
-/* estilos para el form */
-
-/* Form Reset CSS */
-
-
-input, select, textarea, button {
+/* Reset de controles */
+input,
+select,
+textarea,
+button {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-button, [type="button"], [type="reset"], [type="submit"] {
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
-/* Form Container */
-.form-container {
+
+/* Contenedor del formulario */
+section form {
   background-color: #f0f4f8;
   color: #2d3748;
-  font-family: 'Inter', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   padding: 2rem;
@@ -107,13 +44,15 @@ button, [type="button"], [type="reset"], [type="submit"] {
   margin: 0 auto;
 }
 
-/* Form Group */
-.form-group {
+
+/* Cada campo del formulario */
+section form > div {
   margin-bottom: 1.5rem;
 }
 
-/* Form Labels */
-.form-label {
+
+/* Etiquetas */
+section form label {
   display: block;
   color: #4a5568;
   font-size: 0.875rem;
@@ -121,10 +60,10 @@ button, [type="button"], [type="reset"], [type="submit"] {
   margin: 0 0 0.5rem 0;
 }
 
-/* Text Inputs */
-.form-input,
-.form-textarea,
-.form-select {
+
+/* Input y Select */
+section form input,
+section form select {
   width: 100%;
   background-color: #ffffff;
   color: #2d3748;
@@ -137,106 +76,28 @@ button, [type="button"], [type="reset"], [type="submit"] {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-input:focus,
-.form-textarea:focus,
-.form-select:focus {
+
+/* Cuando el usuario selecciona el campo */
+section form input:focus,
+section form select:focus {
   border-color: #4299e1;
   outline: none;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.25);
 }
 
-/* Textarea */
-.form-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
 
-/* Select Dropdown */
-.form-select {
+/* Select */
+section form select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2 4L6 8L10 4' stroke='%234299e1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2 4L6 8L10 4' stroke='%234299e1' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 2.5rem;
 }
 
-/* Checkboxes and Radio Buttons Container */
-.form-check {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-}
 
-/* Custom Checkbox and Radio Styling */
-.form-check-input {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.form-check-label {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  padding-left: calc(1.25rem + 0.5rem);
-  color: #4a5568;
-}
-
-.form-check-label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  transition: all 0.2s ease;
-}
-
-.form-check-input[type="checkbox"] + .form-check-label:before {
-  border-radius: 0.25rem;
-}
-
-.form-check-input[type="radio"] + .form-check-label:before {
-  border-radius: 50%;
-}
-
-.form-check-input:checked + .form-check-label:before {
-  background-color: #4299e1;
-  border-color: #4299e1;
-}
-
-.form-check-input[type="checkbox"]:checked + .form-check-label:after {
-  content: '';
-  position: absolute;
-  left: calc(1.25rem / 4);
-  top: 50%;
-  transform: translateY(-60%) rotate(45deg);
-  width: calc(1.25rem / 3);
-  height: calc(1.25rem / 2);
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-}
-
-.form-check-input[type="radio"]:checked + .form-check-label:after {
-  content: '';
-  position: absolute;
-  left: calc(1.25rem / 4);
-  top: 50%;
-  transform: translateY(-50%);
-  width: calc(1.25rem / 2);
-  height: calc(1.25rem / 2);
-  border-radius: 50%;
-  background-color: #000;
-}
-
-/* Buttons */
-.form-button {
+/* Botón Crear ToDo */
+section form button[type="submit"] {
   background-color: #4299e1;
   color: #ffffff;
   border: 1px solid transparent;
@@ -244,278 +105,122 @@ button, [type="button"], [type="reset"], [type="submit"] {
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   cursor: pointer;
-  transition: undefined;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.form-button:hover {
+
+section form button[type="submit"]:hover {
   background-color: #3182ce;
-}
-
-.form-button-primary {
-  background-color: #4299e1;
-  color: #ffffff;
-  border-color: transparent;
-}
-
-.form-button-primary:hover {
-  background-color: #3182ce;
-}
-
-/* Button Group */
-.form-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-/* Validation Styling */
-.form-input.is-invalid,
-.form-textarea.is-invalid,
-.form-select.is-invalid {
-  border-color: #e53e3e;
-}
-
-.form-input.is-valid,
-.form-textarea.is-valid,
-.form-select.is-valid {
-  border-color: #38a169;
-}
-
-.form-feedback-invalid {
-  color: #e53e3e;
-  font-size: 0.85em;
-  margin-top: 0.25rem;
-}
-
-.form-feedback-valid {
-  color: #38a169;
-  font-size: 0.85em;
-  margin-top: 0.25rem;
-}
-
-/* Required Field Indicator */
-.required:after {
-  content: '*';
-  color: #e53e3e;
-  margin-left: 0.25rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .form-container {
-    padding: 1.5rem;
-  }
-  
-  .form-buttons {
-    flex-direction: column;
-  }
-  
-  .form-button {
-    width: 100%;
-  }
-}
-
-/* Browser Compatibility Notes */
-/* 
- * - Custom checkbox/radio styles may require fallbacks for IE11
- * - CSS variables used here are supported in all modern browsers
- * - For older browsers, consider using autoprefixer or similar tools
- */
-
- /* =========================================================
-   ESTILOS COMPLEMENTARIOS PARA APP.TSX
-   ========================================================= */
-
-/* Contenedor general de la aplicación */
-#root {
-  min-height: 100vh;
-  padding: 2rem;
-  background: #f7fafc;
-  color: #2d3748;
-}
-
-/* =========================================================
-   TITULO PRINCIPAL
-   ========================================================= */
-
-#root > div:first-child {
-  max-width: 900px;
-  margin: 0 auto 1rem;
-  color: #1c6ea4;
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-
-/* =========================================================
-   CONTADOR
-   ========================================================= */
-
-/* El <p> que contiene el contador */
-#root > p {
-  width: fit-content;
-  min-width: 100px;
-  margin: 0 auto 1rem;
-  padding: 1rem 2rem;
-  background: #ffffff;
-  color: #1c6ea4;
-  border: 2px solid #1c6ea4;
-  border-radius: 10px;
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* Botones del contador */
-#root > button {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.2rem;
-  background: #1c6ea4;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease,
-              transform 0.2s ease,
-              box-shadow 0.2s ease;
-}
-
-#root > button:hover {
-  background: #155a87;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-#root > button:active {
-  transform: translateY(0);
-}
-
-
-/* =========================================================
-   SECCIONES
-   ========================================================= */
-
-#root > section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-#root > section h1,
-#root > section h2 {
-  margin-bottom: 1.5rem;
-  color: #1c6ea4;
-}
-
-
-/* =========================================================
-   FORMULARIO
-   ========================================================= */
-
-#root form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Cada campo del formulario */
-#root form > div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-/* Etiquetas */
-#root form label {
-  color: #4a5568;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-/* Input y select */
-#root form input,
-#root form select {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: #ffffff;
-  color: #2d3748;
-  border: 1px solid #cbd5e0;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.2s ease,
-              box-shadow 0.2s ease;
-}
-
-/* Placeholder */
-#root form input::placeholder {
-  color: #a0aec0;
-}
-
-/* Estado focus */
-#root form input:focus,
-#root form select:focus {
-  border-color: #4299e1;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
-}
-
-/* Botón Crear ToDo */
-#root form button[type="submit"] {
-  width: 100%;
-  margin-top: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  background: #4299e1;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease,
-              transform 0.2s ease;
-}
-
-#root form button[type="submit"]:hover {
-  background: #3182ce;
   transform: translateY(-1px);
 }
 
-#root form button[type="submit"]:active {
+
+section form button[type="submit"]:active {
   transform: translateY(0);
 }
 
 
 /* =========================================================
-   TABLA
+   ESTILOS PARA LA TABLA
    ========================================================= */
 
-#root > section:last-child {
-  overflow-x: auto;
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
 }
 
-/* Evita que el ID UUID haga crecer demasiado la tabla */
-.blueTable td:first-child {
-  max-width: 220px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
+table.blueTable td,
+table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 8px 6px;
+}
+
+
+table.blueTable tbody td {
+  font-size: 13px;
+}
+
+
+/* Filas alternas */
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+
+
+/* Encabezado */
+table.blueTable thead {
+  background: #1C6EA4;
+  background: linear-gradient(
+    to bottom,
+    #5592bb 0%,
+    #327cad 66%,
+    #1C6EA4 100%
+  );
+  border-bottom: 2px solid #444444;
+}
+
+
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+
+
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+
+/* Pie de tabla */
+table.blueTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: linear-gradient(
+    to bottom,
+    #dcebf7 0%,
+    #d4e6f6 66%,
+    #D0E4F5 100%
+  );
+  border-top: 2px solid #444444;
+}
+
+
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+
+
+/* Enlaces del pie de tabla */
+table.blueTable tfoot .links {
+  text-align: right;
+}
+
+
+table.blueTable tfoot .links a {
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
 
 
 /* =========================================================
-   ESTADOS DE TAREA
+   ESTADO DE LAS TAREAS
    ========================================================= */
 
-.blueTable td:last-child span {
+table.blueTable td:last-child span {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 4px;
   font-weight: 600;
 }
 
@@ -526,42 +231,125 @@ button, [type="button"], [type="reset"], [type="submit"] {
 
 @media (max-width: 768px) {
 
-  #root {
-    padding: 1rem;
+  section form {
+    padding: 1.5rem;
   }
 
-  #root > section {
-    padding: 1rem;
+  section form button[type="submit"] {
+    width: 100%;
   }
 
-  #root > div:first-child {
-    font-size: 1.6rem;
-  }
-
-  #root > p {
-    font-size: 2rem;
-    padding: 0.8rem 1.5rem;
-  }
-
-  #root > button {
-    width: calc(50% - 1rem);
-    margin: 0.5rem 0.25rem;
-  }
-
-  .blueTable {
+  table.blueTable {
     min-width: 600px;
+  }
+
+  /* Permite desplazamiento horizontal en pantallas pequeñas */
+  section:last-child {
+    overflow-x: auto;
   }
 }
 
-@media (max-width: 480px) {
+ /* =========================================================
+    ESTILOS GENERALES PARA ENCABEZADOS
+    ========================================================= */
 
-  #root > button {
-    width: 100%;
-    margin: 0.4rem 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #2d3748;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+
+/* Título principal */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1C6EA4;
+}
+
+
+/* Títulos de sección */
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1C6EA4;
+}
+
+
+/* Subtítulos */
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+
+/* Encabezados pequeños */
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   AJUSTES PARA EL ENCABEZADO PRINCIPAL
+   ========================================================= */
+
+.app-header h1 {
+  color: #ffffff;
+  margin: 0;
+}
+
+
+/* =========================================================
+   AJUSTES PARA LAS SECCIONES
+   ========================================================= */
+
+.app-section h2 {
+  color: #1C6EA4;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE PARA ENCABEZADOS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.75rem;
   }
 
-  #root > section h1,
-  #root > section h2 {
-    font-size: 1.3rem;
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
   }
 }
