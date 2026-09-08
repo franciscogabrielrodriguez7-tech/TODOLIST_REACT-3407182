@@ -1,16 +1,77 @@
 {
-    "todos": [
-        {
-            "id": 1,
-            "title": "Tarea 1",
-            "prioridad": "Alta",
-            "completado": false
-        },
-        {
-            "id": 2,
-            "title": "Tarea 2",
-            "prioridad": "Media",
-            "completado": true
-        }
-    ]
+  "todos": [
+    {
+      "id": "1",
+      "title": "Tarea 1",
+      "prioridad": "Alta",
+      "completado": false
+    },
+    {
+      "id": "2",
+      "title": "Tarea 2",
+      "prioridad": "Media",
+      "completado": true
+    },
+    {
+      "title": "Tarea 3",
+      "prioridad": "Baja",
+      "completado": false,
+      "id": "cFYsSPYxMxY"
+    },
+    {
+      "title": "un todo nuevo",
+      "prioridad": "Media",
+      "completed": true,
+      "id": "RK4NOwa0IMI"
+    },
+    {
+      "title": "un todo nuevo",
+      "prioridad": "Media",
+      "completed": true,
+      "id": "pCpxz5ldak4"
+    },
+    {
+      "title": "un todo nuevo",
+      "prioridad": "Media",
+      "completed": true,
+      "id": "I7RZuFbtT0Q"
+    },
+    {
+      "title": "Mi ejemplo",
+      "prioridad": "Alta",
+      "completed": false,
+      "id": "QhRZmn-VmC0"
+    },
+    {
+      "titulo": "Tarea 3",
+      "prioridad": "Baja",
+      "completada": false,
+      "id": "I2sZBtpE69o"
+    },
+    {
+      "titulo": "lavar la ropa",
+      "prioridad": "Baja",
+      "completada": false,
+      "id": "Emi_neZlHLM"
+    },
+    {
+      "id": "GjzH14PqPyo",
+      "titulo": "jhjh",
+      "prioridad": "Media",
+      "completada": false
+    },
+    {
+      "id": "mMt0mKh2CgY",
+      "titulo": "lavar la ropa",
+      "prioridad": "Baja",
+      "completada": false
+    },
+    {
+      "id": "iEMClZg1yTg",
+      "titulo": "lavar la loza",
+      "prioridad": "Media",
+      "completada": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
