@@ -1,0 +1,16 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "title": "Tarea 1",
+            "prioridad": "Alta",
+            "completado": false
+        },
+        {
+            "id": 2,
+            "title": "Tarea 2",
+            "prioridad": "Media",
+            "completado": true
+        }
+    ]
+}
