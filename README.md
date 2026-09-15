@@ -30,3 +30,16 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+
+# Al hacer un `npm install` correr en dos terminales la `api` falsa y el `frontend`
+
+```json
+
+  npm install
+
+  npm run dev
+
+  npm run api
+
+```

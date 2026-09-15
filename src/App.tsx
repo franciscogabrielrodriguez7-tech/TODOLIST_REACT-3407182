@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 
 import ListTodo from './components/ListTodo';
-import type { Priority, Todo } from './interfaces/Form'
+import type { Priority, Todo } from './interfaces/todos/Form'
 import FormTodo from './components/FormTodo';
 import { consultarTodosAxios, crearTodoAxios, crearTodoFetch } from './services/TodoService';
 

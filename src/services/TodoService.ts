@@ -2,7 +2,7 @@
 //se hace una funcion por cada operacion(de letra de CRUD)
 
 import axios from "axios"
-import type { Todo } from "../interfaces/Form"
+import type { Todo } from "../interfaces/todos/Form"
 
 //1. Consultar los Todos
 

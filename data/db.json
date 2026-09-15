@@ -71,6 +71,38 @@
       "titulo": "lavar la loza",
       "prioridad": "Media",
       "completada": false
+    },
+    {
+      "id": "hKcadWovd4Y",
+      "titulo": "fefe",
+      "prioridad": "Baja",
+      "completada": false
+    },
+    {
+      "id": "tyX0JNRa12I",
+      "titulo": "sisi",
+      "prioridad": "Baja",
+      "completada": false
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "nombre": "cristian buitrago",
+      "email": "cdo@sea.edu.co",
+      "rol": "Admin"
+    },
+    {
+      "id": "2",
+      "nombre": "Carlos Zarta",
+      "email": "cz@sea.edu.co",
+      "rol": "Dev"
+    },
+    {
+      "nombre": "Francisco Rdoriguez",
+      "email": "fgrs@sea.edu.co",
+      "rol": "Dev",
+      "id": "9tMLJGNzNgY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,0 +1,9 @@
+POST http://localhost:3006/users HTTP/1.1
+content-type: application/json
+
+{
+    "nombre": "Francisco Rdoriguez",
+    "email": "fgrs@sea.edu.co",
+    "rol": "Dev"
+}
+
