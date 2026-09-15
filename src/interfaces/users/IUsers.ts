@@ -10,8 +10,8 @@ export interface IUserForm {
 
 // interface para el usuario a guardar
 export interface IUser {
-    id: string
     nombre: string
+    id: string
     email: string
     rol: Rol
 }
