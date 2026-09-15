@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Todo } from '../interfaces/todos/Form'
+import type { Todo } from '../../interfaces/todos/Form'
 import { FiCheckCircle, FiAlertCircle, } from "react-icons/fi"
 
 interface ItemTodoProps{
